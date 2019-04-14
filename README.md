@@ -1,8 +1,14 @@
-# vimrc
+## Install Modified VIM step by step:  
+If there is original VIM,uninstall it by:   
+```
+sudo apt-get remove vim  
+sudo apt-get remove vim-runtime  
+sudo apt-get remove vim-tiny  
+sudo apt-get remove vim-common  
+sudo apt-get remove vim-doc  
+sudo apt-get remove vim-scripts  
+```
 
-This is my config file for vim with spf-13.
-
-Here is the step to fellow me:
 ## 0. Prepare
 In Ubuntu, some packages are needed to be installed to complie Vim.
 ```
@@ -15,12 +21,10 @@ sudo ln -sf /usr/include/lua5.3/*.* /usr/include
 sudo ln -s /usr/lib/x86_64-linux-gnu/liblua5.3.so /usr/lib/liblua.so
 ```
 
-## 1. Install Vim
-In ArchLinux, Install Vim with `sudo pacman -S gvim`
-
+## 1. Install Vim  
 In Ubuntu, you need to complie Vim form source,when config you need to run this
 ```
-./configure --with-features=huge --enable-pythoninterp --enable-rubyinterp --enable-luainterp --enable-perlinterp --with-python-config-dir=/usr/lib/python2.7/config/ --enable-gui=gtk2 --enable-cscope --enable-fail-if-missing
+./configure --with-features=huge --enable-pythoninterp --enable-rubyinterp --enable-luainterp --enable-perlinterp --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu --enable-gui=gtk2 --enable-cscope --enable-fail-if-missing
 ```
 rember to change the `with-pyton-config-dir`
 
