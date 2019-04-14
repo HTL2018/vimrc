@@ -21,35 +21,41 @@ sudo ln -sf /usr/include/lua5.3/*.* /usr/include
 sudo ln -s /usr/lib/x86_64-linux-gnu/liblua5.3.so /usr/lib/liblua.so
 ```
 
-## 1. Install Vim  
-In Ubuntu, you need to complie Vim form source,when config you need to run this
-```
+## 1. Install Vim from source:  
+In Ubuntu, you need to complie Vim form source,when config you need to run this:  
+```  
+git clone https://github.com/vim/vim.git  
+cd vim  
+```  
+In Ubuntu16.04,you should install GTK: 
+```  
+ apt-get install libgtk2.0-dev  
+ ```  
+Then:  
+```  
 ./configure --with-features=huge --enable-pythoninterp --enable-rubyinterp --enable-luainterp --enable-perlinterp --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu --enable-gui=gtk2 --enable-cscope --enable-fail-if-missing
 ```
-rember to change the `with-pyton-config-dir`
+remember to change the `with-pyton-config-dir`
 
 ## 2. Install my conig
-1.  git clone https://github.com/rxy0424/vimrc.git
-2.  run ./install.py in vimrc directory
+```
+git clone https://github.com/rxy0424/vimrc.git  
+cd vimrc  
+./install.py   
+```  
 
 ## 3. Install the changed [spf-13](https://github.com/rxy0424/spf13-vim)
 The spf-13 i forked control plugins with vim-plug,you can install this version by 
 ```
 curl https://raw.githubusercontent.com/rxy0424/spf13-vim/feature/vim-plug/bootstrap.sh -L > spf13-vim.sh && sh spf13-vim.sh
 ```
-## 4. Complie YouCompleteMe.
-if you use ArchLinux
-```
-sudo pacman -S python-pip clang
-cd ~/.vim/bundle/YouCompleteMe
-./install.py --clang-completer --system-libclang
-```
+## 4. Complie YouCompleteMe.  
+In Ubuntu:  
+```  
+cd ~/.vim/bundle/YouCompleteMe  
+./install.py --clang-completer  
+```  
 
-if you use Ubuntu
-```
-cd ~/.vim/bundle/YouCompleteMe
-./install.py --clang-completer
-```
 ## 5. Install tmux >= 2.1
 install tmux >=2.1 and [oh-my-tmux](https://github.com/gpakosz/.tmux), you need xsel for copying to system clipboard,
 
