@@ -53,6 +53,7 @@ curl https://raw.githubusercontent.com/rxy0424/spf13-vim/feature/vim-plug/bootst
 In Ubuntu:  
 ```  
 cd ~/.vim/bundle/YouCompleteMe  
+git submodule update --init --recursive  
 ./install.py --clang-completer  
 ```  
 
