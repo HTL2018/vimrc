@@ -7,6 +7,15 @@ sudo apt-get remove vim-tiny
 sudo apt-get remove vim-common  
 sudo apt-get remove vim-doc  
 sudo apt-get remove vim-scripts  
+```  
+查询系统中有哪些与vim相关的软件，(比如vim、vim-common和vim-run等)，然后彻底删除他们：  
+```  
+dpkg -l | grep vim    
+sudo dpkg -P vim vim-common vim-run  
+```  
+如果源码编译失败后重装或者删除原有的vim:  
+```  
+切记:进入 `/home` 目录下后: `Ctrl + H` 查看隐藏文件;  
 ```
 
 ## 0. Prepare
