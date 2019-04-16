@@ -34,6 +34,7 @@ sudo ln -s /usr/lib/x86_64-linux-gnu/liblua5.3.so /usr/lib/liblua.so
 ## 1. Install Vim from source:  
 In Ubuntu, you need to complie Vim form source,when config you need to run this:  
 ```  
+cd  
 git clone https://github.com/vim/vim.git  
 cd vim  
 ```  
