@@ -15,7 +15,8 @@ sudo dpkg -P vim vim-common vim-run
 ```  
 如果源码编译失败后重装或者删除原有的vim:  
 ```  
-切记:进入 `/home` 目录下后: `Ctrl + H` 查看隐藏文件;  
+切记:进入 /home 目录下后: Ctrl + H 查看隐藏文件  
+删除: .spf13-vim-3 .vim .tmux  
 ```
 
 ## 0. Prepare
