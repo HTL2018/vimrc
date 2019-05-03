@@ -59,7 +59,26 @@ cd vimrc
 The spf-13 i forked control plugins with vim-plug,you can install this version by 
 ```
 curl https://raw.githubusercontent.com/rxy0424/spf13-vim/feature/vim-plug/bootstrap.sh -L > spf13-vim.sh && sh spf13-vim.sh
+```   
+
+注:在此处编译完成之后我用 vim 尝试打开一个文件,出现如下错误:  
+```  
+Error detected while processing function plug#end:  
+line   86:  
+E484: Can't open file /usr/share/vim/vim81/syntax/syntax.vim  
+Error detected while processing /home/tenglong/.vimrc:  
+line  109:  
+E484: Can't open file /usr/share/vim/vim81/syntax/syntax.vim  
+Warning: Cannot find word list "en.utf-8.spl" or "en.ascii.spl"  
+Press ENTER or type command to continue  
+```  
+解决办法:  (需要人为创建vim81的软连接)  
+我的vim81的位置:`/usr/local/share/vim/vim81`  
 ```
+cd /usr/share/vim  
+ln -s /usr/local/share/vim/vim81  
+```  
+
 ## 4. Complie YouCompleteMe.  
 In Ubuntu:  
 ```  
